@@ -1,0 +1,22 @@
+#:kivy 2.1.0
+<MenuPage>:
+    Screen:
+        BoxLayout:
+            pos_hint: {"top":1}
+            size_hint_y: 0.8
+            orientation: "vertical"
+            MDLabel:
+                halign: "center"
+                text: "MENUPAGE"
+            Button:
+                text: "Tests"
+                on_release: root.route_tests()
+            Button:
+                text: "Results"
+                on_release: root.route_results()
+        GridLayout:
+            cols: 1
+            size_hint_y: 0.2
+            Button:
+                text: "Back"
+                on_release: root.back_to_start()

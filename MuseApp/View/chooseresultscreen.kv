@@ -1,0 +1,21 @@
+#:kivy 2.1.0
+<ChooseResultPage>:
+    Screen:
+        BoxLayout:
+            size_hint_y: 0.8
+            pos_hint: {"top":1}
+            orientation: "vertical"
+            id: layout
+            MDLabel:
+                size_hint_y: 0.3
+                halign: "center"
+                text: "ChooseResult"
+            MDScrollView:
+                MDList:
+                    id: test_list
+        GridLayout:
+            cols: 1
+            size_hint_y: 0.2
+            Button:
+                text: "Back"
+                on_release: root.back_to_menu()

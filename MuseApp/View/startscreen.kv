@@ -1,0 +1,27 @@
+#:kivy 2.1.0
+<EntryPage>:
+    Screen:
+        GridLayout:
+            cols: 1           
+            MDLabel:
+                size_hint_y: 0.2
+                halign: "center"
+                text: "Create a new user: "
+            TextInput:
+                size_hint_y: 0.1
+                multiline: False
+                id: tfNewUser
+                hint_text: "Username"
+                required: True
+            Button:
+                size_hint_y: 0.2
+                text: "save"
+                on_press: root.save_new_user()
+                disabled: True if tfNewUser.text == '' else False
+            MDLabel:
+                size_hint_y: 0.2
+                halign: "center"
+                text: "Existing users: "
+            MDScrollView:
+                MDList:
+                    id: user_list

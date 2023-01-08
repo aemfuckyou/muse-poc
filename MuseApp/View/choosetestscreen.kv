@@ -1,0 +1,22 @@
+#:kivy 2.1.0
+<ChooseTestPage>:
+    Screen:
+        BoxLayout: 
+            pos_hint: {"top":1}
+            size_hint_y: 0.8
+            orientation: "vertical"
+            MDLabel:
+                halign: "center"
+                text: "CHOOSTESTPAGE"
+            Button:
+                text: "Visual Test"
+                on_release: root.start_visual_test()
+            Button:
+                text: "Audio-Visual Test"
+                on_release: root.start_audio_visual_test()
+        GridLayout:
+            cols: 1
+            size_hint_y: 0.2
+            Button:
+                text: "Back"
+                on_release: root.back_to_menu()
